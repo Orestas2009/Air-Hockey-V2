@@ -301,9 +301,9 @@ GameObject:
   m_Component:
   - component: {fileID: 178177464}
   - component: {fileID: 178177463}
-  - component: {fileID: 178177465}
   - component: {fileID: 178177467}
   - component: {fileID: 178177466}
+  - component: {fileID: 178177468}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -380,22 +380,6 @@ Transform:
   - {fileID: 547342111}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &178177465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178177462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec942a553611d4e5eadacd6dd433bd17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
-  jumpSound: {fileID: 0}
-  hitSound: {fileID: 8300000, guid: 66e3a3003c1f03a468f6111bef587202, type: 3}
-  scoreSound: {fileID: 0}
 --- !u!50 &178177466
 Rigidbody2D:
   serializedVersion: 4
@@ -458,6 +442,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &178177468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178177462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec942a553611d4e5eadacd6dd433bd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  jumpSound: {fileID: 0}
+  hitSound: {fileID: 0}
+  scoreSound: {fileID: 0}
 --- !u!1 &228942231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655f812c8e966c844bce873038ae1b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 15
   target: {fileID: 1618614818}
 --- !u!50 &712413979
 Rigidbody2D:
@@ -1289,7 +1289,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &712413980
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3139,7 +3139,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0

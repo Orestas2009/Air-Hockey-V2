@@ -4,8 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class INTRO : MonoBehaviour
 {
-    void StartGame()
-    {
-        SceneManager.LoadScene("Game");
-    }
+    void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                SceneManager.LoadScene(1);
+            }
+        }
+    
 }
